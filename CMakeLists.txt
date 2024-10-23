@@ -308,9 +308,9 @@ if(RDK_BUILD_PYTHON_WRAPPERS)
   endif()
 
 
-  find_package(Boost ${RDK_BOOST_VERSION} COMPONENTS "python${Python3_VERSION_MAJOR}${Python3_VERSION_MINOR}" "numpy${Python3_VERSION_MAJOR}${Python3_VERSION_MINOR}" REQUIRED CONFIG)
+  find_package(Boost ${RDK_BOOST_VERSION} COMPONENTS "python" "numpy" REQUIRED CONFIG)
 
-  target_link_libraries(rdkit_py_base INTERFACE "Boost::python${Python3_VERSION_MAJOR}${Python3_VERSION_MINOR}" "Boost::numpy${Python3_VERSION_MAJOR}${Python3_VERSION_MINOR}")
+  target_link_libraries(rdkit_py_base INTERFACE "Boost::python" "Boost::numpy")
 
   if(RDK_INSTALL_INTREE)
     set(RDKit_PythonDir "${CMAKE_SOURCE_DIR}/rdkit")

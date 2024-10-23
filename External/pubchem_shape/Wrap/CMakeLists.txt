@@ -1,6 +1,6 @@
 find_package(Python3 COMPONENTS Interpreter Development.Module NumPy REQUIRED)
 find_package(Python3 COMPONENTS Interpreter REQUIRED)
-set(py3lib "python${Python3_VERSION_MAJOR}${Python3_VERSION_MINOR}")
+set(py3lib "python")
 find_package(Boost COMPONENTS ${py3lib} REQUIRED CONFIG)
 
 
